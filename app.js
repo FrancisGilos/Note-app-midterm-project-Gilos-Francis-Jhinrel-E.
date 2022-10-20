@@ -3,6 +3,7 @@ const read = require('./read')
 const present = require('./present')
 const del = require('./del')
 const update = require('./update')
+const write = require('./write')
 // get user input
 const cmd = process.argv
 
@@ -46,4 +47,8 @@ if(cmd[2]==="delete"){
     update(note, oldNote)
 
     present(read())
+}
+
+if(cmd[2] == 'write'){
+    console.log(write())
 }
